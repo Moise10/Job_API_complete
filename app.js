@@ -17,6 +17,10 @@ const authenticateUser = require('./middleware/authentication')
 
 //Routers
 
+app.get('/', (res, req) => {
+	res.send('My Job API');
+});
+
 const authRouter = require('./routes/auth')
 const jobsRouter = require('./routes/jobs')
 
