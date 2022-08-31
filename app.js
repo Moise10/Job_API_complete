@@ -17,7 +17,7 @@ const authenticateUser = require('./middleware/authentication')
 
 //Routers
 
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
 	res.send('My Job API');
 });
 
