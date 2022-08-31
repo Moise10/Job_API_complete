@@ -11,6 +11,8 @@ const rateLimiter = require('express-rate-limit')
 
 
 //ConnectDB
+app.use(express.json());
+
 
 const connectDB = require('./db/connect')
 const authenticateUser = require('./middleware/authentication')
@@ -42,7 +44,6 @@ app.use('/api/v1/jobs', authenticateUser,jobsRouter);
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-app.use(express.json());
 
 
 app.set('trust proxy', 1);
